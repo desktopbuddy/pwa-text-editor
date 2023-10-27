@@ -20,7 +20,10 @@ module.exports = () => {
         template: './index.html',
         title: 'Text editor'
       }),
-      new GenerateSW()
+      new InjectManifest({
+        swSrc: './src-sw.js',
+        swDest: 'service-worker.js'
+      })
     ],
 
     module: {
