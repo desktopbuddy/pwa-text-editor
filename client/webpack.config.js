@@ -28,6 +28,7 @@ module.exports = () => {
         short_name: "JATE",
         name: "JATE Just Another Text Editor",
         inject: true,
+        display: 'standalone',
         icons: [
           {
             src: path.resolve("src/images/logo.png"),

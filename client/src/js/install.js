@@ -6,12 +6,13 @@ window.addEventListener('beforeinstallprompt', (event) => {
   event.preventDefault();
   butInstall.style.visibility = 'visible';
   butInstall.textContent = 'Install!'
+  console.log('running beforeinstallprompt');
 });
 
 // click event handler on the `butInstall` element
 butInstall.addEventListener('click', async () => {
   butInstall.setAttribute('disabled', true);
-  butInstall.textContent = 'Installing'
+  butInstall.textContent = 'Installed';
 });
 
 // handler for the `appinstalled` event
