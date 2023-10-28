@@ -18,9 +18,9 @@ export const putDb = async (content) => {
   // Database and version
   const jateDb = await openDB('jate', 1);
   // New transaction specifying database and data priveleges
-  const tx = jateDb.transaction('todos', 'readwrite');
+  const tx = jateDb.transaction('jate', 'readwrite');
   // Open desired object store
-  const store = tx.objectStore('todos');
+  const store = tx.objectStore('jate');
   // .add() passes in content
   const request = store.put({ id: 1, value: content });
   
